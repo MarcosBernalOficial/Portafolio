@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Portafolio</title>
+</head>
+<body>
+    <div class="container">
+        <header class="containerHeader">
+            <h1>Marcos Bernal</h1>
+            <ul>
+                <li><a onclick="cargarContenido('contenido1.html')">Proyectos</a></li>
+                <li><a onclick="cargarContenido('contenido2.html')">Habilidades</a></li>
+                <li><a onclick="cargarContenido('contenido3.html')">Sobre Mi</a></li>
+            </ul>
+        </header>
+        
+        <main id="contenido" class="containerMain">
+            <h2>2</h2>
+            
+        </main>
+
+        <footer class="containerFooter">
+            <h2>Contacto</h2>
+            <ul>
+                <li><a href="linkedin.com/in/marcos-bernal-b13a20355"><img id="img1" src="Fotos/linkedin.png" alt=""></a></li>
+                <li><a href=""><img id="img2" src="Fotos/github-sign.png" alt=""></a></li>
+                <li><a href=""><img id="img3" src="Fotos/gmail.png" alt=""></a></li>
+            </ul>
+        </footer>
+
+
+        <script>
+            function cargarContenido(pagina) {
+                fetch(pagina)
+                    .then(response => response.text())
+                    .then(data => document.getElementById('contenido').innerHTML = data)
+                    .catch(error => console.error('Error al cargar el contenido: ', error));
+            }
+
+            window.onload = function() {
+                cargarContenido('contenido2.html');
+            }
+        </script>
+
+
+    </div>
+</body>
+</html>

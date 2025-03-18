@@ -1,0 +1,282 @@
+/*Fonts */
+@font-face {
+    font-family: 'fontshare2';
+    src: url('fonts/Satoshi-Regular.otf') format('truetype');
+    font-weight: lighter;
+    font-style: normal; 
+}
+@font-face {
+    font-family: 'fontshare1';
+    src: url('fonts/CabinetGrotesk-Black.otf') format('truetype');
+    font-weight: lighter;
+    font-style: normal; 
+}
+@font-face {
+    font-family: 'fontshare3';
+    src: url('Fonts/BespokeStencil-Medium.otf') format('truetype');
+    font-weight: lighter;
+    font-style: normal; 
+}
+/*................................................................*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #694738;
+}
+/*................................................................*/
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    height: 100dvh;
+    box-shadow: 0px 0px 10px #ffffff5d;
+}
+/*................................................................*/
+.containerHeader{
+    background-color: #694738;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFE3;
+}
+.containerHeader h1{
+    font-family: 'fontshare3', sans-serif;
+    margin-bottom: 3dvh;
+    background-color: transparent;
+    width: 90%;
+    text-align: center;
+    font-size: 10dvh;
+}
+.containerHeader ul{
+    font-family: 'fontshare2', sans-serif;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #694738;
+    margin-bottom: 2dvh;
+}
+.containerHeader ul li{
+    padding: 1dvh;
+    font-size: 2dvh;
+    border-radius: 7px;
+    background-color: #FFFFE3;
+    color: #694738;
+    font-weight: 700;
+    box-shadow: 0px 0px 10px #ffffff5d;
+    cursor: pointer;
+}
+.containerHeader ul li:hover {
+    background-color: #694738;
+    color: #FFFFE3;
+    transition: 2s;
+}
+
+/*................................................................*/
+.containerMain{
+    background-color: #FFFFE3;
+    color: #694738;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px #ffffff5d;
+}
+.containerMain h2 {
+    font-family: 'fontshare3', sans-serif;
+    text-align: center;
+    margin-top: 1dvh;
+    font-size: 4dvh;
+}
+.containerMain1 ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 1dvh;
+    margin: 0 1dvh;
+    max-height: 50dvh;
+    overflow-y: auto;
+    padding: 1dvh;
+}
+/*................................................................*/
+.containerMain1 ul::-webkit-scrollbar {
+    width: 10px;
+}
+
+.containerMain1 ul::-webkit-scrollbar-track {
+    background-color: #694738;
+    border-radius: 7px; 
+}
+
+.containerMain1 ul::-webkit-scrollbar-thumb {
+    background-color: #FFFFE3;
+    border-radius: 70px; 
+    border: 2px solid #694738; 
+}
+/*................................................................*/
+.containerMain1 ul li{
+    background-color: rgba(37, 37, 37, 0.9);
+    background-color: #FFFFE3;
+    background-blend-mode: multiply;
+    border-radius: 7px;
+    height: 12dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px #3334;
+    transition: 2s;
+}
+.containerMain1 ul li a{
+    text-decoration: none;
+    color: #694738;
+    font-family: 'fontsahare2', sans-serif;
+    text-align: center;
+    font-size: 2dvh;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerMain1 ul li:hover{
+    background-color: #694738;
+}
+.containerMain1 ul li:hover a{
+    color: #FFFFE3;
+    transition: 1s;
+}
+/*................................................................*/
+.containerMain2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+
+}
+.containerMain2 h2{
+    grid-column: span 2;
+}
+
+.habilidadesTecnicas, .habilidadesBlandas{
+    font-family: 'fontshare2', sans-serif;
+    text-align: center;
+    background-color: #694738;
+    color: #FFFFE3;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.habilidadesBlandas{
+    margin: 1dvh;
+}
+.habilidadesTecnicas{
+    margin: 1dvh 0 1dvh 1dvh;
+}
+.habilidadesBlandas h3, .habilidadesTecnicas h3{
+    margin: 1dvh 0;
+    font-family: 'fontshare2', sans-serif;
+    font-size: 2dvh;
+    font-weight: 700;
+}
+.habilidadesBlandas ul, .habilidadesTecnicas ul{
+    list-style-type: none;
+    background-color: #FFFFE3;
+    color: #694738;
+    margin: 1dvh;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.habilidadesBlandas ul li, .habilidadesTecnicas ul li{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid #694738;
+    padding: 1dvh;
+}
+.habilidadesBlandas ul li img, .habilidadesTecnicas ul li img{
+    height: 4dvh;
+    transition: 1s;
+}
+#imgHtml{
+    filter: drop-shadow(0px 0px 5px #DD4B25);
+}
+#imgCss{
+    filter: drop-shadow(0px 0px 5px #006CB4);
+}
+#imgJs{
+    filter: drop-shadow(0px 0px 5px #ECD320);
+}
+#imgJava{
+    filter: drop-shadow(0px 0px 5px #507E9C);
+}
+#imgC{
+    filter: drop-shadow(0px 0px 5px #005697);
+}
+
+/*................................................................*/
+.containerFooter{
+    background-color: #694738;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1dvh;
+}
+
+.containerFooter h2{
+    background-color: #FFFFE3;
+    color: #694738;
+    box-shadow: 0px 0px 10px #ffffff5d;
+    font-family: 'fontshare3', sans-serif;
+    margin: 1dvh 0;
+    border-radius: 7px;
+    text-align: center;
+    padding: 1dvh;
+    transition: 2s;
+}
+
+.containerFooter ul{
+    list-style-type: none;
+    box-shadow: 0px 0px 10px #ffffff5d;
+    margin: 1dvh 0;
+    display: flex;
+    background-color: #FFFFE3;
+    border-radius: 7px;
+    justify-content: space-evenly;
+}
+
+.containerFooter ul li{
+    padding: 0.5dvh 0;
+
+}
+.containerFooter ul li img{
+    height: 4dvh;
+    transition: 1s;
+}
+
+.containerFooter h2:hover{
+    background-color: #694738;
+    color: #FFFFE3;
+}
+
+#img1{
+    filter: drop-shadow(0px 0px 5px #0077B5);
+}
+#img2{
+    filter: drop-shadow(0px 0px 5px #000000);
+}
+#img3{
+    filter: drop-shadow(0px 0px 5px #FF4131);
+}
